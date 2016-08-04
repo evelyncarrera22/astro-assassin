@@ -1,0 +1,108 @@
+body.loading{
+ background-image: url("../images/space_background.jpg");
+
+}
+
+#Cockpit{
+ position:absolute;
+ width: 100%; 
+ height: 100%;
+ left:0px;
+ z-index:39;
+ }
+ 
+#score{
+ font-family:"Calibri";
+ font-size:150px;
+ color:#ffffff;
+}
+#tutorial{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0px;
+ }
+ 
+p  {font-family: "Courier New";
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#timeboard{
+font-family: "Courier New";
+font-size: 75px;
+color: #ffffff;
+text-align: right;
+position: absolute;
+bottom: 30px;
+z-index: 60px;
+right:30%;
+width:10%;
+border: 1px solid #FFFFFF;
+}
+ 
+ #timer{
+  font-family: "Courier New";
+  font-size: 150px;
+  color: #ffffff;
+  text-align: center;
+ }	
+ 
+ .token{
+	background-color:#0062f1;
+
+	
+}
+
+.score{
+     background-color:#000000;
+     border: 1px solid #FFFFFF;
+     font-family:comic;
+     font-size:80px;
+     color:white;
+     position: absolute
+     bottom: 30px;
+     z-index: 60;
+     left:30%;
+     width:10%;
+    
+}
+    
+#Earth{ bottom: 270px; left:40%; }
+#Neptune { bottom: 220px; left:40%; }
+#Mars{ bottom: 170px; left:40%; }
+#Mercury { bottom: 120px; left:40%; }
+#Jupiter { bottom: 70px; left:40%; }
+#Uranus { bottom: 270px; left:50%; }
+#Pluto{ bottom: 220px; left:50%; }
+#Venus { bottom: 170px; left:50%; }
+#Saturn { bottom: 120px; left:50%; }
+
+
+
+ 
+ 
+ #startbutton {
+     margin: auto;
+    width: 60%;
+    margin-top: 150px;
+ }
+#Begin {
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+  }
+     
+ #title {
+ font-family:;
+ font-size: 50px;
+ color:#ffffff;
+ text-align: center;
+}
+h1{
+ color: white;
+}
+h2{
+ color:white;
+}

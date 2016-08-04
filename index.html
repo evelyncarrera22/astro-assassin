@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<!--
+    This is an HTML page that contains a CSS and a Javascript file.
+    
+    Run this sample by clicking the 'Preview' button on top;
+    a new tab will open with the current page open.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>astroassassin</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    </head>
+    
+    <body background="images/space_background.jpg">
+       <style>
+          
+       </style>
+       
+    <div id="title" class="title">Astro Assassin</div>
+      
+    <div id="startbutton">
+        <a href="Loading.html?_c9_id=livepreview3&_c9_host=https://ide.c9.io">
+            <img id="Begin" src="images/Power_Button.png" height="140px">
+        </a>
+     </div>
+     
+       <audio id=GuardianTheme src="Sounds/Guardians_Of_The_Galaxy_-_Main_Theme_By_Tyler_Bates[www.mp3cool.pw].mp3" preload="auto"></audio>
+
+    <!-- load scripts at the bottom of your page -->
+        <script src="js/site.js">
+
+        </script>
+        
+        <script>
+            playSound("GuardianTheme");
+            
+        </script>
+        
+    </body>
+</html>
+
+
+<!--
+    This is an HTML page that contains a CSS and a Javascript file.
+    
+    Run this sample by clicking the 'Preview' button on top;
+    a new tab will open with the current page open.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Astro Assasins</title>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+  <script type='text/javascript'>
+    MAX_DEPTH = 32;
+
+    var canvas, ctx;
+    var stars = new Array(512);
+
+    window.onload = function() {
+      canvas = document.getElementById("tutorial");
+      if (canvas && canvas.getContext) {
+        ctx = canvas.getContext("2d");
+        initStars();
+        setInterval(loop, 33);
+      }
+    }
+
+    /* Returns a random number in the range [minVal,maxVal] */
+    function randomRange(minVal, maxVal) {
+      return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal;
+    }
+
+    function initStars() {
+      for (var i = 0; i < stars.length; i++) {
+        stars[i] = {
+          x: randomRange(-25, 25),
+          y: randomRange(-25, 25),
+          z: randomRange(1, MAX_DEPTH)
+        }
+      }
+    }
+
+    function loop() {
+      var halfWidth = canvas.width / 2;
+      var halfHeight = canvas.height / 2;
+
+      ctx.fillStyle = "rgb(0,0,0)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      for (var i = 0; i < stars.length; i++) {
+        stars[i].z -= 0.2;
+
+        if (stars[i].z <= 0) {
+          stars[i].x = randomRange(-25, 25);
+          stars[i].y = randomRange(-25, 25);
+          stars[i].z = MAX_DEPTH;
+        }
+
+        var k = 128.0 / stars[i].z;
+        var px = stars[i].x * k + halfWidth;
+        var py = stars[i].y * k + halfHeight;
+
+        if (px >= 0 && px <= 1000 && py >= 0 && py <= 1000) {
+          var size = (1 - stars[i].z / 32.0) * 5;
+          var shade = parseInt((1 - stars[i].z / 32.0) * 255);
+          ctx.fillStyle = "rgb(" + shade + "," + shade + "," + shade + ")";
+          ctx.fillRect(px, py, size, size);
+        }
+      }
+    }
+  </script>
+
+
+  <canvas id='tutorial' width='1280' height='900'>
+    Your browser does not support HTML5 canvas. Please upgrade your browser.
+  </canvas>
+  <script>
+  </script>
+
+  <div class="container">
+    <div id="Earth" class="token">Earth</div>
+    <div id="Neptune" class="token">Neptune</div>
+    <div id="Mars" class="token">Mars</div>
+    <div id="Mercury" class="token">Mercury</div>
+    <div id="Jupiter" class="token">Jupiter</div>
+    <div id="Uranus" class="token">Uranus</div>
+    <div id="Pluto" class="token">Pluto</div>
+    <div id="Venus" class="token">Venus</div>
+    <div id="Saturn" class="token">Saturn</div>
+  </div>
+
+
+
+  <div id="timeboard" class="score">0</div>
+
+  </div>
+
+  <img id="Cockpit" src="images/cockpit.png"></img>width: 100px
+
+  <audio id=RedAlert src="Sounds/Red Alert-SoundBible.com" preload="auto"></audio>
+  <audio id=ShinyDing src="Sounds/shiny-ding.mp3" preload="auto"></audio>
+  <audio id=SonicBoom src="Sounds/Sonic Boom-SoundBible.com-876321507.mp3" preload="auto"></audio>
+  <audio id=GuardianTheme src="Sounds/Guardians_Of_The_Galaxy_-_Main_Theme_By_Tyler_Bates.mp3" preload="auto"></audio>
+  <!-- load scripts at the bottom of your page -->
+  <script src="js/site.js"></script>
+  <script src="js/planets.js"></script>
+
+  <audio id=GuardianTheme src="Sounds/Guardians_Of_The_Galaxy_-_Main_Theme_By_Tyler_Bates[www.mp3cool.pw].mp3" preload="auto" autoplay></audio>
+
+
+</body>
+
+</html>
+
+<!--
+    This is an HTML page that contains a CSS and a Javascript file.
+    
+    Run this sample by clicking the 'Preview' button on top;
+    a new tab will open with the current page open.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Game title</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body class="loading">
+    
+    <p> "You have now entered the World of the Astro Assasins. In order to win, you must select the correct planet."</p>
+    <div id ="timer"> </div>
+
+    <center><img src="images/planets gif .gif"></img></center>
+    <script src="js/Loading.js">
+
+    
+    
+</body>
+
+
+
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>astroassassin</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    </head>
+    
+    <body background="images/space_background.jpg">
+       <style>
+          
+       </style>
+
+
+
+
+
+       <!DOCTYPE html>
+<html>
+   <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>astroassassin</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    </head>
+    
+    <body background="images/space_background.jpg">
+       <style>
+          
+       </style>
+           <center> <img src="http://javascriptgamer.com/brickslayer/sprites/gameover.png" style="width:300px; margin-top:200px"></center> 
+           <center><h2> <a href="Loading.html?_c9_id=livepreview3&_c9_host=https://ide.c9.io">Play again, fam</h2></center></a> 
+            
+    </body>
+</html>
